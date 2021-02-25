@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.head {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 45px;
+  border-bottom: 1px solid #c4c4c4;
+  background-color: #c4c4c418;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 6px;
+}
+
+.head img {
+  width: 35px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+.head #previous {
+  width: 30px;
+  padding: 3px;
+}
+
+.head #profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.head #profile #profile-name {
+  display: inline;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+}
+
+.head #profile #profile-pic {
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+  margin-right: 10px;
+}
+
+.head #call {
+  padding: 5px 8px;
+}
+
+.head #call img {
+  width: 30px;
+  padding: 3px;
+  margin: 0 3px;
+}
+
+.big-papa {
+  margin-top: 45px;
+}
+
+.big-papa #no-internet {
+  background-color: #f85959;
+  color: #374744;
+  font-size: 14px;
+  display: block;
+  padding: 4px 0;
+  font-weight: 600;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.big-papa .body-chat {
+  height: 520px;
+  width: 100%;
+}
+
+.teal {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 6px;
+  height: 45px;
+}
+
+.teal div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.teal img {
+  width: 30px;
+  padding: 3px;
+  cursor: pointer;
+  margin: auto 4px;
+}
+
+.teal .first-class {
+  padding: 0 4px;
+}
+
+.teal .second-class {
+  background-color: #c4c4c480;
+  padding: 2px 6px;
+  border-radius: 1rem;
+}
+
+.teal .second-class #message {
+  padding-left: 6px;
+  border: none;
+  font-size: 1rem;
+  background-color: transparent;
+  outline: none;
+  width: 120px;
+}
+/*# sourceMappingURL=main.css.map */

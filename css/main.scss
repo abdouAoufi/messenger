@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.head {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 45px;
+    border-bottom: 1px solid #c4c4c4;
+    background-color: #c4c4c418;
+    align-items: center;
+    padding: 0 6px;
+    img {
+      width: 35px;
+      padding: 3px;
+      cursor: pointer;
+    }
+    #previous {
+      width: 30px;
+      padding: 3px;
+    }
+
+    #profile {
+      // border: 1px solid magenta;
+      display: flex;
+      align-items: center;
+
+      #profile-name {
+        display: inline;
+        font-size: 16px;
+        font-weight: 600;
+        text-align: center;
+      cursor: pointer;
+
+      }
+
+      #profile-pic {
+        clip-path: circle(50% at 50% 50%);
+        margin-right: 10px;
+      }
+    }
+    #call {
+      padding: 5px 8px;
+
+      img {
+        width: 30px;
+        padding: 3px;
+        margin: 0 3px;
+      }
+    }
+  }
+.big-papa {
+
+margin-top: 45px;
+  #no-internet{
+      background-color: #f85959;
+      color: #374744;
+      font-size: 14px;
+      display: block;
+      padding: 4px 0;
+      font-weight: 600;
+      text-align: center;
+      align-items: center;
+  }
+
+  .body-chat{
+      height: 520px;
+      width: 100%;
+    //   border: 2px solid black;
+  }
+
+  
+}
+.teal{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 6px;
+    height: 45px;
+    div{
+        display: flex;
+        align-items: center;
+
+    }
+    img {
+      width: 30px;
+      padding: 3px;
+      cursor: pointer;
+      margin: auto 4px ;
+
+    }
+    .first-class{
+      padding: 0 4px;
+      
+    }
+    .second-class{
+      background-color: #c4c4c480;
+        padding: 2px 6px;
+        border-radius: 1rem;
+      #message{
+          padding-left: 6px;
+          border: none;
+          font-size: 1rem;
+          background-color: transparent;
+          outline: none;
+          width: 120px;
+      }
+    }
+    .third-class{
+
+    }
+
+}
