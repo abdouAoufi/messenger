@@ -80,7 +80,8 @@
       send.click(function () {
         assignMessage();
         // alert(message);
-        creatMessage(message);
+        let returnedMessage = creatMessage(message);
+        reportOnPromise(returnedMessage);
         clearMessage();
       });
 
@@ -88,29 +89,37 @@
         message = messageInput.val();
       }
 
-      function creatMessage(text) {
-        let messageHolder = `   <div class="sender">
-          <img
-            src="images/portrait.jpg"
-            alt="profile picture "
-            id="profile-pic-message"
-          />
-          <div class="message-holder">
-            <p id="message-par">${text}</p>
-          </div>
-        </div>`;
-        
-        let reponse = `   <div class="sender rtl ">
-            
+      let creatMessage = function creatMessage(text) {
+        let messageHolder = `   <div class="sender rtl">
+                
+                <div class="message-holder">
+                  <p id="message-par">${text}</p>
+                </div>
+              </div>`;
+        bodyChat.append(messageHolder);
+
+        return Promise.resolve(text);
+      };
+
+      const reportOnPromise = function (promise) {
+        promise
+          .then((result) => {
+            let response = `   <div class="sender  ">
+              <img
+                  src="images/portrait.jpg"
+                  alt="profile picture "
+                  id="profile-pic-message"
+                />
             <div class="message-holder">
-                <p id="message-par">${text}</p>
+                <p id="message-par">${result}</p>
                 </div>
                 </div>`;
-                
-                
-                bodyChat.append(reponse);
-                bodyChat.append(messageHolder);
-      }
+            setTimeout(function () {
+              bodyChat.append(response);
+            }, 1000);
+          })
+          .catch((message) => console.log(`Error calling ${message} `));
+      };
 
       function clearMessage() {
         messageInput.val("");
