@@ -6,7 +6,6 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-
 }
 
 img:hover {
@@ -91,8 +90,7 @@ img:hover {
   }
 
   .body-chat {
-      z-index: -1;
-    // height: 520px;
+    z-index: -1;
     margin-bottom: 50px;
     width: 100%;
 
@@ -106,6 +104,11 @@ img:hover {
    
     .rtl{
         direction: rtl;
+
+        .message-holder{
+          color: white;
+          background-color: rgb(35, 100, 221)!important;
+      }
     }
 
     .sender {
@@ -125,7 +128,6 @@ img:hover {
         cursor: pointer;
       }
       .message-holder{
-
         padding: 0.6rem 0.8rem ;
         border-radius: 1rem;
         background-color: #c4c4c485;
@@ -135,7 +137,6 @@ img:hover {
             text-align: end;
             font-size: .9rem;
             font-weight: 400;
-            
         }
       }
     }

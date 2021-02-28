@@ -132,6 +132,11 @@ img:hover {
   direction: rtl;
 }
 
+.big-papa .body-chat .rtl .message-holder {
+  color: white;
+  background-color: #2364dd !important;
+}
+
 .big-papa .body-chat .sender {
   margin-top: 0.8rem;
   padding: 0 .5rem;
