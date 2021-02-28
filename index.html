@@ -5,49 +5,116 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Messenger App</title>
-    <link rel="stylesheet" href="css/main.css">
-    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css" />
+    <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet" />
   </head>
   <body>
     <div class="head">
-        <img src="images/previous.png" alt="previous" id="previous">
-        <div id="profile">
-            <img src="images/portrait.jpg" alt="image profile " id="profile-pic">
-            <h3 id="profile-name">Hamza Messoudane </h3>
-        </div>
-        <div id="call">
-            <img src="images/telephone.png" alt="telephone" id="telephone">
-            <img src="images/video-call.png" alt="video call" id="video">
-        </div>
+      <img
+        src="images/previous.png"
+        alt="previous"
+        id="previous"
+        title="previous"
+      />
+      <div id="profile">
+        <img src="images/portrait.jpg" alt="image profile " id="profile-pic" />
+        <h3 id="profile-name">Maissa Hemad</h3>
+      </div>
+      <div id="call">
+        <img
+          src="images/telephone.png"
+          alt="telephone"
+          id="telephone"
+          title="audio call"
+        />
+        <img
+          src="images/video-call.png"
+          alt="video call"
+          id="video"
+          tilte="video"
+        />
+      </div>
     </div>
-      <section class="big-papa">
-    
-        <span id="no-internet">No Internet Connection </span>
+    <section class="big-papa">
+      <span id="no-internet">No Internet Connection </span>
 
-        <div class="body-chat">
+      <div class="body-chat">
+        <span id="time-conversation"> 7:14 PM </span>
+      </div>
+    </section>
+    <div class="teal">
+      <div class="first-class">
+        <img src="images/add.png" alt="add" id="add" title="more features" />
+        <img
+          src="images/photo.png"
+          alt="add image "
+          id="photo"
+          title="picture"
+        />
+        <img
+          src="images/microphone.png"
+          alt="voice "
+          id="voice"
+          title="record"
+        />
+      </div>
+      <div class="second-class">
+        <input type="text" placeholder="message" id="message" />
+        <img src="images/smile.png" alt="smile" id="emojie" title="emojie" />
+      </div>
 
-            <div class="sender"></div>
+      <div class="third-class">
+        <img src="images/like.png" alt="like" id="like" title="like" />
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-            <div class="reciver"></div>
+    <script>
+      const messageInput = $("#message");
+      const send = $("#like");
+      const bodyChat = $(".body-chat");
+      let message = "";
 
-        </div>
+      $(document).ready(function () {});
 
+      send.click(function () {
+        assignMessage();
+        // alert(message);
+        creatMessage(message);
+        clearMessage();
+      });
+
+      function assignMessage() {
+        message = messageInput.val();
+      }
+
+      function creatMessage(text) {
+        let messageHolder = `   <div class="sender">
+          <img
+            src="images/portrait.jpg"
+            alt="profile picture "
+            id="profile-pic-message"
+          />
+          <div class="message-holder">
+            <p id="message-par">${text}</p>
+          </div>
+        </div>`;
         
-      </section>
-      <div class="teal">
-        <div class="first-class">
-            <img src="images/add.png" alt="add" id="add">
-            <img src="images/photo.png" alt="add image " id="photo">
-            <img src="images/microphone.png" alt="voice " id="voice">
-        </div>
-        <div class="second-class">
-            <input type="text" placeholder="message" id="message">
-            <img src="images/smile.png" alt="smile" id="emojie">
-        </div>
+        let reponse = `   <div class="sender rtl ">
+            
+            <div class="message-holder">
+                <p id="message-par">${text}</p>
+                </div>
+                </div>`;
+                
+                
+                bodyChat.append(reponse);
+                bodyChat.append(messageHolder);
+      }
 
-        <div class="third-class">
-            <img src="images/like.png" alt="like" id="like ">
-        </div>
-    </div>
+      function clearMessage() {
+        messageInput.val("");
+      }
+    </script>
   </body>
 </html>
